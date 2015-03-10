@@ -2,21 +2,17 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>Sample 01</title>
+  <title>Sample 02</title>
   <meta name="viewport" content="width=device-width">
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-  <h2>Sample 01</h2>
-  <!-- jQuery will change this -->
-  <a href=""></a>
+<div class="container" id="mainContent">
+  <h2>Sample 02</h2>
 </div>
-  <!-- to this <a href="http://www.jquery.com">jQuery.</a> -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script>
-    jQuery('a').text('jQuery').attr('href', 'http://www.jquery.com');
+    jQuery('<a>JQuery</a>').attr('href', 'http://www.jquery.com').appendTo("#mainContent");
   </script>
-
 </body>
 </html>
