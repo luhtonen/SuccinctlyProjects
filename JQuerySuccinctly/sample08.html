@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 08</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 08</h2>
+  <ul id="list">
+    <li></li>
+    <li>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    $('#list') // Original wrapper set
+        .find('> li') // Destructive method
+        .filter(':last') // Destructive method
+        .addClass('last')
+        .end() // End .filter(':last')
+        .find('ul') // Destructive method
+        .css('background', '#ccc')
+        .find('li:last') // Destructive method
+        .addClass('last')
+        .end() // End find('li:last)
+        .end()// End find('ul')
+        .end() // End find('> li')
+        .find('li') // Back to the original ('#last')
+        .append('I am an &lt;li&gt;');
+  })(jQuery)
+</script>
+</body>
+</html>

@@ -1,3 +1,6 @@
 .no-padding {
   padding-right: 0;
 }
+.last {
+  background: #900;
+}
