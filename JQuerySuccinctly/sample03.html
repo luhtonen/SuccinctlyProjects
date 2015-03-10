@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 03</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 03</h2>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script>
+  // Standard
+  jQuery(document).ready(function () { alert('DOM is ready!'); });
+
+  // Shurtcut, but same thing as above.
+  jQuery(function() { alert('No really, the DOM is ready!'); });
+
+  // Shortcut with fail-safe usage of $. Keen in mind that a reference
+  // to the jQuery function is passed into the anonymous function.
+  jQuery(function($) {
+    alert('Seriously its ready!');
+    // Use $() without fear of conflicts.
+  });
+</script>
+</body>
+</html>
