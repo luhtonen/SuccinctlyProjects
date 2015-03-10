@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 06</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 06</h2>
+  <a></a>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    $('a').text('jQuery') // Sets text to jQuery, and then returns $('a').
+        .attr('href', 'http://www.jquery.com') // Sets the href attribute and then returns $('a').
+        .addClass('jQuery'); // Sets class and then returns $('a').
+  })(jQuery)
+</script>
+</body>
+</html>
