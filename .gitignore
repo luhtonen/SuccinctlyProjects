@@ -26,3 +26,11 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# Bower dependency directory
+bower_components
+
+# WebStorm project files
+.idea
+.idea/*
+*.iml

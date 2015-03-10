@@ -1,0 +1,32 @@
+{
+  "name": "JQuerySuccinctly",
+  "version": "0.0.1",
+  "homepage": "https://github.com/luhtonen/SuccinctlyProjects",
+  "authors": [
+    "Eduard Luhtonen <luhtonen@gmail.com>"
+  ],
+  "description": "Examples from the JQuery Succinctly eBook",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "JQuery",
+    "Node.js",
+    "JavaScript",
+    "Succinctly",
+    "Bower",
+    "Grunt"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
