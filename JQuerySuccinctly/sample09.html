@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 09</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 09</h2>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script> jQuery(function($) { // Pass jQuery a function
+  // Pass jQuery a string of HTML
+//  $('<p></p>').appendTo('body'); // original sample code
+  $('<p></p>').appendTo('.container'); // this appends HTML to element of class container
+  // Pass jQuery an element reference
+  $(document.createElement('a')).text('jQuery').appendTo('p');
+  // Pass jQuery a CSS expression
+  $('a:first').attr('href', 'http://www.jquery.com');
+  // Pass jQuery a DOM reference
+  $(document.anchors[0].attr('jQuery'));
+});
+</script>
+</body>
+</html>
