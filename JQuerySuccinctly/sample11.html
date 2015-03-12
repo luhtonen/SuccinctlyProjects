@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 11</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 11</h2>
+  <a id="link1">jQuery.com</a>
+  <a id="link2">jQuery.com</a>
+  <a id="link3">jQuery.com</a>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    $('a').each(function() {
+      // Loop that alerts the id value for every <a> in the page
+      alert($(this).attr('id')); // "this" refers to the current element in the loop
+    });
+  })(jQuery);
+</script>
+</body>
+</html>
