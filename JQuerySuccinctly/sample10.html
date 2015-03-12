@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 10</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 10</h2>
+  <a id="link1">jQuery.com</a>
+  <a id="link2">jQuery.com</a>
+  <a id="link3">jQuery.com</a>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    $('a').mouseenter(
+        function() { alert(this.id); }
+    );
+  })(jQuery);
+</script>
+</body>
+</html>
