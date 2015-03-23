@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 23</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 23</h2>
+  <div id="i0">jQuery</div>
+  <div id="i1">jQuery</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Returns true
+    alert($('div').is('#i1'));
+    // Returns false. Wrapper set contains no <div> with id="i2"
+    alert($('div').is('#i2'));
+    // Returns false. Wrapper set contains no hidden <div>
+    alert($('div').is(':hidden'));
+  })(jQuery);
+</script>
+</body>
+</html>
