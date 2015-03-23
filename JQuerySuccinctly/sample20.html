@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 20</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 20</h2>
+  <div>
+    <div id="context"><a href="#">jQuery</a></div>
+  </div>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Alerts "object HTMLDocument" in Google Chrome
+    // Same as $('a', document).context;
+    alert($('a').context);
+    // Alerts "object HTMLDivElement" in Google Chrome
+    alert($('a', $('#context')[0]).context);
+  })(jQuery);
+</script>
+</body>
+</html>
