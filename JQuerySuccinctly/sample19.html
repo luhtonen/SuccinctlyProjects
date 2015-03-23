@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 19</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <p>Sample 19</p>
+  <h1>h1</h1>
+  <h2>h2</h2>
+  <h3>h3</h3>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // We pass in h3 first, but h1 appears earlier in
+    // the document, so it is first in wrapper set
+    alert($('h3, h2, h1').get(0).nodeName);
+    // Alerts "H1"
+  })(jQuery);
+</script>
+</body>
+</html>
