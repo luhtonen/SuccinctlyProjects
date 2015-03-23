@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 22</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 22</h2>
+  <div id="parentDiv" style="display: none;">
+    <div id="childDiv" style="display: block;"></div>
+  </div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Returns true because the parent div is hidden, so the
+    // encapsulated div reports zero offsetWidth and offsetHeight
+    alert($('#childDiv').is(':hidden'));
+  })(jQuery);
+</script>
+</body>
+</html>
