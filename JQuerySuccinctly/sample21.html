@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 21</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 21</h2>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    jQuery('<ul></ul>')
+        .append('<li><a>jQuery.com</a></li><li><a>jQuery Documentation</a></li>')
+        .find('a:first')
+        .attr('href', 'http://www.jquery.com')
+        .end()
+        .find('a:eq(1)')
+        .attr('href', 'http://docs.jquery.com')
+        .end()
+        .find('a')
+        .click(function () { return confirm('Leave this page?'); })
+        .end()
+        .appendTo('body');
+  })(jQuery);
+</script>
+</body>
+</html>
