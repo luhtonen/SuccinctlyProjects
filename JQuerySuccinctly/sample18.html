@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 18</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+  <h2>Sample 18</h2>
+  <div id="div1">I am a div</div>
+  <div id="div2">I am a div</div>
+  <div id="div3">I am a div</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // 3 alerts, one for each div
+    $('div').each(function() {
+      // "this" is each element in the wrapper set
+      alert($(this).attr('id'));
+      // Could also be written: alert(this.id);
+    });
+  })(jQuery);
+</script>
+</body>
+</html>
