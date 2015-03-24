@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 26</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 26</h2>
+  <div style="position: absolute">absolute</div>
+  <span style="position: absolute">absolute</span>
+  <div>static</div>
+  <div style="position: absolute">absolute</div>
+  <div>static</div>
+  <span style="position: absolute">absolute</span>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Define custom filter by extending $.expr[':']
+    $.expr[':'].positionAbsolute = function(element) {
+      return $(element).css('position') === 'absolute';
+    };
+    // How many elements in the page are absolutely positioned?
+    alert($(':positionAbsolute').length); // Alerts "4"
+// How many div elements are absolutely positioned?
+    alert($('div:positionAbsolute').length); // Alerts "2".
+  })(jQuery);
+</script>
+</body>
+</html>
