@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 28</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 28</h2>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Remember that text() combines the contents of all
+    // elements in the wrapper set into a single string
+    alert($('li:nth-child(2)').text()); // Alerts "22"
+    alert($('li:nth-child(odd)').text()); // Alerts "135135"
+    alert($('li:nth-child(even)').text()); // Alerts "2424"
+    alert($('li:nth-child(2n)').text()); // Alerts "2424"
+  })(jQuery);
+</script>
+</body>
+</html>
