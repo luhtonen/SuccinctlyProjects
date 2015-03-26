@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 30</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 30</h2>
+  <a title="jQuery">jQuery.com</a><br/>
+  <a href="http://www.jquery.com" title="jQuery" class="foo">jQuery.com 1</a><br/>
+  <a href="">jQuery.com</a>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Alerts "1"
+    alert($('a[title="jQuery"][href^="http://"]').length);
+  })(jQuery);
+</script>
+</body>
+</html>
