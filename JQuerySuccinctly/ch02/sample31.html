@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 31</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+  <h2>Sample 31</h2>
+  <div>javascript</div>
+  <div><span class="jQuery">jQuery</span></div>
+  <div>javascript</div>
+  <div><span class="jQuery">jQuery</span></div>
+  <div>javascript</div>
+  <div><span class="jQuery">jQuery</span></div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Select all div's, remove all div's that have a child element with class="jQuery"
+    alert($('div:not(:has(.jQuery))').text()); // Alerts combined text of all div's
+    // Select all div's, remove all div's that are odd in the set (count starts at 0)
+    alert($('div:not(:odd)').text()); // Alerts combined text of all div's
+  })(jQuery);
+</script>
+</body>
+</html>
