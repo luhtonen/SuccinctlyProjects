@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 41</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 41</h2>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    alert($('<div><a></a></div>').get(0).nodeName);  // Alerts "DIV"
+    alert($('<div><a></a></div>').length); // Alerts "1" <div> is in the wrapper set
+    alert($('<div><a></a></div><div><a></a></div>').length); // Alerts "2" <div> are in the set
+  })(jQuery);
+</script>
+</body>
+</html>
