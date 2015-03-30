@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 35</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 35</h2>
+  <ul id="firstUL">
+    <li>text</li>
+    <li>
+      <ul id="secondUL">
+        <li>text</li>
+        <li>text</li>
+      </ul>
+    </li>
+    <li>text</li>
+  </ul>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Select only the direct <li> children. Alerts "3"
+    alert($('ul:first').find('> li').length); // or
+    alert($('> li', 'ul:first').length);
+  })(jQuery);
+</script>
+</body>
+</html>
