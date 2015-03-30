@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 39</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 39</h2>
+  <ul>
+    <li>jQuery is great.</li>
+    <li>It's lightweight.</li>
+    <li>Its free!</li>
+    <li>jQuery makes everything simple.</li>
+  </ul>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Wrap a <strong> element around any text within
+    // a <li> that contains the pattern "jQuery"
+    var pattern = /jQuery/i;
+    $('ul li').filter(function() {
+      return pattern.test($(this).text());
+    }).wrap('<strong></strong>');
+  })(jQuery);
+</script>
+</body>
+</html>
