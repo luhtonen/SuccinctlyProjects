@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 38</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 38</h2>
+  <img />
+  <img />
+  <p>
+    <img />
+  </p>
+  <img />
+  <p>
+    <img />
+  </p>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    $('img').attr('src', 'http://static.jquery.com/files/rocker/images/logo_jquery_215x53.gif').filter(function() {
+      return !$(this).parent('p').length == 1}).wrap('<p></p>');
+  })(jQuery);
+</script>
+</body>
+</html>
