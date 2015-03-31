@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 45</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 45</h2>
+  <div id="nav">
+    <div>nav text</div>
+    <div>nav text</div>
+    <div>nav text</div>
+    <div>nav text</div>
+  </div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Alerts index of the clicked div amongst all div's in wrapper set
+    $('#nav div').click(function() {
+      alert($('#nav div').index(this));
+      // or, a nice trick...
+      alert($(this).prevAll().length);
+    });
+  })(jQuery);
+</script>
+</body>
+</html>
