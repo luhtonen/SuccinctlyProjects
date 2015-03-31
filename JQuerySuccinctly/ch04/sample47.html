@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 47</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 47</h2>
+  <p>
+    I really hate using JavaScript.     I mean really hate it!     It is the best twister ever!
+  </p>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    var $p = $('p');
+    // Replace 'hate' with 'love'
+    $p.text($p.text().replace(/hate/ig, 'love'));
+    // Remove twister and replace with nothing
+    $p.text($p.text().replace(/twister/ig, '')); // Keep in mind that text() returns string, not a jQuery object
+    // That is how the replace() string method is chained after using text()
+  })(jQuery);
+</script>
+</body>
+</html>
