@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 43</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 43</h2>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    $('<div><a></a></div>')
+        .find('a')
+        .text('jQuery')
+        .attr('href', 'http://www.jquery.com')
+        .end().appendTo('body'); // end() is used to exit the find() method
+  })(jQuery);
+</script>
+</body>
+</html>
