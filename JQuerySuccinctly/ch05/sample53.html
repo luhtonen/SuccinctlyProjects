@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 53</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 53</h2>
+  <input name="button" type="button" id="button1" class="btn btn-default" value="Click me 1"/>
+  <input name="button" type="button" id="button2" class="btn btn-default" value="Click me 2" disabled="disabled"/>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Is it enabled?
+    alert($('#button1').is(':enabled')); // Alerts true
+    // Or using the filter
+    alert($('#button1:enabled').length); // Alerts "1"
+    // Is it disabled?
+    alert($('#button2').is(':disabled')); // Alerts true
+    // Or using the filter
+    alert($('#button2:disabled').length); // Alerts "1"
+  })(jQuery);
+</script>
+</body>
+</html>
