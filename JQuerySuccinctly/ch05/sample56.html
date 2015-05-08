@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 56</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 56</h2>
+  <input value="radio1" type="radio"/>
+  <input value="radio2" type="radio"/>
+  <input value="checkbox1" type="checkbox"/>
+  <input value="checkbox2" type="checkbox"/>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Check all radio and checkbox inputs on the page
+    $('input:radio,input:checkbox').val(['radio1', 'radio2', 'checkbox1', 'checkbox2']);
+    // Use explicit iteration to clear
+    // $('input:radio,input:checkbox').removeAttr('checked');
+    // or
+    // $('input:radio,input:checkbox').attr('checked', '');
+  })(jQuery);
+</script>
+</body>
+</html>
