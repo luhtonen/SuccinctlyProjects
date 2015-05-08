@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 52</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 52</h2>
+  <input name="button" type="button" id="button" class="btn" value="Click me" disabled="disabled"/>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    $('#button').removeAttr('disabled');
+    // or
+    // $('#button').attr('disabled', '');
+  })(jQuery);
+</script>
+</body>
+</html>
