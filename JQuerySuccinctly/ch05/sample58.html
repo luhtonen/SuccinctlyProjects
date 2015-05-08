@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 57</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 57</h2>
+  <input type="hidden"/>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Alerts "true"
+    alert($('input').is(':hidden'));
+    // Or, added to wrapper set if hidden. Alerts "1"
+    alert($('input:hidden').length);
+  })(jQuery);
+</script>
+</body>
+</html>
