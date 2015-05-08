@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 49</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 49</h2>
+  <p>jQuery gives me <strong>more <span>power</span></strong> than any other web tool!</p>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    $('p').find('*') // Select all nodes.
+        .andSelf() // Include <p>
+        .contents() // Grab all child elements, including text
+        .filter(function() {
+          return this.nodeType == Node.TEXT_NODE; // Remove non-text nodes
+        })
+        .each(function(i, text) {
+          alert(text.nodeValue); // Alert text contained in wrapper set
+        });
+  })(jQuery);
+</script>
+</body>
+</html>
