@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 61</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 61</h2>
+  <select size="4" multiple="multiple">
+    <option value="option1">option one</option>
+    <option value="option2">option two</option>
+    <option value="option3">option three</option>
+    <option value="option4">option four</option>
+  </select>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Set the value of the selected options
+    $('select').val(['option2', 'option4']);
+    // Get the selected values
+    alert($('select').val().join(', ')); // Alerts "option2, option4"
+  })(jQuery);
+</script>
+</body>
+</html>
