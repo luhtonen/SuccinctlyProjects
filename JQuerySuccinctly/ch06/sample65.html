@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 65</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 65</h2>
+  <input type="text" value="click me" />
+  <br/>
+  <br/>
+  <button>remove events</button>
+  <div id="log" name="log"></div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Bind events
+    $('input').bind('click', function() { alert('You clicked me!'); });
+    $('input').bind('focus', function () {
+      // alert and focus events are a recipe for an endless list of dialogs
+      // we will log instead
+      $('#log').html('You focused this input!');
+    });
+    // Unbind events
+    $('button').click(function () {
+      // Using shortcut binding via click()
+      $('input').unbind('click');
+      $('input').unbind('focus');
+      // Or unbind all events
+      // $('input').unbind();
+    });
+  })(jQuery);
+</script>
+</body>
+</html>
