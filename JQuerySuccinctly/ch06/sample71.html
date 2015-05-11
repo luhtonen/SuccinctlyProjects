@@ -14,11 +14,11 @@
 </div>
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <script>
-  (function($) {
+  $(document).ready(function() {
     $('button').on('click', function () {
       $(this).after("<button>Add another button</button>");
     });
-  })(jQuery);
+  });
 </script>
 </body>
 </html>
