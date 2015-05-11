@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 66</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 66</h2>
+  <a>Say Hi</a>
+  <!-- clicking this element will alert "hi" -->
+  <a>Say Hi</a>
+  <!-- clicking this element will alert "hi" -->
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Bind a click handler to all <a> and immediately invoke their handlers
+    $('a').click(function() { alert('hi'); }).click();
+    // Page will alert twice. On page load, a click
+    // is triggered for each <a> in the wrapper set
+  })(jQuery);
+</script>
+</body>
+</html>
