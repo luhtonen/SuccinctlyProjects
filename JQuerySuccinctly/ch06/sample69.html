@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 69</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 69</h2>
+  <a>click</a>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    $('a').bind('click', function () {
+      alert('You clicked me');
+    });
+    $('a').bind('click.unique', function () {
+      alert('You triggered click.unique');
+    });
+    // Invoke the function passed to click.unique
+    $('a').trigger('click.unique');
+  })(jQuery);
+</script>
+</body>
+</html>
