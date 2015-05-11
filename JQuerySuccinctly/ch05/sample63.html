@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 63</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 63</h2>
+  <button>Button</button>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    // Set the value: <button value="I am a Button Element">
+    $('button').val('I am a Button Element');
+    // Alerts "I am a Button Element"
+    alert($('button').val());
+  })(jQuery);
+</script>
+</body>
+</html>
