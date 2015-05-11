@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 68</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 68</h2>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  (function($) {
+    $(window).bind('resize', function () {
+      alert('I have no namespace');
+    });
+    $(window).bind('resize.unique', function () {
+      alert('I have a unique namespace');
+    });
+    // Removes only the resize.unique function from event handler
+    $(window).unbind('resize.unique');
+  })(jQuery);
+</script>
+</body>
+</html>
