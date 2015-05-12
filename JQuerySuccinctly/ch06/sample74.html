@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 74</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 74</h2>
+  <span>stop</span>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    // Attach click handler to <div>
+    $('div').click(function (event) {
+      alert('You clicked on the outer div');
+    });
+    $('span').click(function (event) {
+      // Attach click handler to <span>
+      alert('You clicked a span inside of a div element');
+      // Stop click on <span> from propagating to <div>.
+      // If you comment out the line below,
+      // the click event attached to div will also be invoked.
+      event.stopPropagation();
+    })
+  });
+</script>
+</body>
+</html>
