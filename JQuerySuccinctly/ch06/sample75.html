@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 74</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 74</h2>
+  <span><a href="javascript:alert('You clicked me!')" class="alert-link">click me</a></span>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    $('span').click(function (event) {
+      // Attach click handler to <span>
+      window.location = 'http://www.jquery.com';
+    });
+    $('a').click(function () {
+      // Ignore clicks on <a>
+      return false;
+    })
+  });
+</script>
+</body>
+</html>
