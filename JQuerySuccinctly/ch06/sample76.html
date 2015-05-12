@@ -2,27 +2,26 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>Sample 75</title>
+  <title>Sample 76</title>
   <meta name="viewport" content="width=device-width">
   <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="../main.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-  <h2>Sample 75</h2>
-  <span><a href="javascript:alert('You clicked me!')" class="alert-link">click me</a></span>
+  <h2>Sample 76</h2>
 </div>
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <script>
   $(document).ready(function() {
-    $('span').click(function (event) {
-      // Attach click handler to <span>
+    $('div').bind('myCustomEvent', function () {
+      // Bind custom event to <div>
       window.location = 'http://www.jquery.com';
     });
-    $('a').click(function () {
-      // Ignore clicks on <a>
-      return false;
-    })
+    $('div').click(function () {
+      // Click the <div> to invoke custom event
+      $(this).trigger('myCustomEvent');
+    });
   });
 </script>
 </body>
