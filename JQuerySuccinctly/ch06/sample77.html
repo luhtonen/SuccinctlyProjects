@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 77</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 77</h2>
+  <button>Add another button</button>
+  <a href="#" class="clone">Add another link</a>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    $('button').click(function () {
+      var $this = $(this);
+      $this.clone(true).insertAfter(this);
+      // Clone element and its events
+      $this.text('button').unbind('click'); // Change text, remove event
+    });
+    $('.clone').click(function () {
+      var $this = $(this);
+      $this.clone().insertAfter(this); // Clone element, but not its events
+      $this.text('link').unbind('click'); // Change text, remove event
+    });
+  });
+</script>
+</body>
+</html>
