@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 78</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 78</h2>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    $(document).mousemove(function (e) {
+      // e.pageX - gives you the X position
+      // e.pageY - gives you the Y position
+      $('body').html('e.pageX = ' + e.pageX + ', e.pageY = ' + e.pageY);
+    });
+  });
+</script>
+</body>
+</html>
