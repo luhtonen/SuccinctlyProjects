@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 79</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" style="background: #ccc; height: 100px;">
+  <h2>Sample 79</h2>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    $('div').mousemove(function (e) {
+      // relative to this div element instead of document
+      var relativeX = e.pageX - this.offsetLeft;
+      var relativeY = e.pageY - this.offsetTop;
+      $(this).html('relativeX = ' + relativeX + ', relativeY = ' + relativeY);
+    });
+  });
+</script>
+</body>
+</html>
