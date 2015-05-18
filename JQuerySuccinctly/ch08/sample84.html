@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 84</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 84</h2>
+  <div id="counter1"></div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    $.fn.count = function () {
+      // "this" is equal to  jQuery('#counter1')
+      alert(this); // Alerts jQuery object
+      alert(this[0]); // Alerts div element
+      alert(this[0].id); // Alerts "counter1"
+    };
+    $('#counter1').count();
+  });
+</script>
+</body>
+</html>
