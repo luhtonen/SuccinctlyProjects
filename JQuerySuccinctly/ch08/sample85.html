@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 85</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 85</h2>
+  <div id="counter1"></div>
+  <div id="counter2"></div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    $.fn.count = function () {
+      this.each(function () {
+        // "this" is current jQuery object
+        var $this = $(this);
+        $this.text('0'); // Set the counter start number
+        window.setInterval(function () {
+          // Interval for counting
+          var currentCount = parseFloat($this.text());
+          var newCount = currentCount + 1;
+          $this.text(newCount + '');
+        }, 1000);
+      });
+    };
+    $('#counter1, #counter2').count();
+  });
+</script>
+</body>
+</html>
