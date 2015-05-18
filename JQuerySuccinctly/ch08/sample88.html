@@ -2,24 +2,28 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>Sample 87</title>
+  <title>Sample 88</title>
   <meta name="viewport" content="width=device-width">
   <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="../main.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-  <h2>Sample 87</h2>
+  <h2>Sample 88</h2>
   <div id="counter1"></div>
   <div id="counter2"></div>
 </div>
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <script>
   $(document).ready(function() {
-    $.fn.count = function () {
+    $.fn.count = function (customOptions) {
+      // Create new option, extend object with defaultOptoins and customOptions
+      var options = $.extend({}, $.fn.count.defaultOptions, customOptions);
       return this.each(function () {
         var $this = $(this);
-        $this.text($.fn.count.defaultOptions.startCount + ''); // Sets the counter start number to zero
+        // Sets the counter start number to the default option value
+        // or to a custom option value if it is passed to the plugin
+        $this.text(options.startCount + '');
         window.setInterval(function () {
           var currentCount = parseFloat($this.text());
           var newCount = currentCount + 1;
@@ -28,8 +32,8 @@
       });
     };
     $.fn.count.defaultOptions = { startCount: 100 };
-    $('#counter1, #counter2').count().parent() // Chaining continues because jQuery object is returned
-        .append('<p>Chaining still works!</p>');
+    // Passing a custom option overrides default
+    $('#counter1, #counter2').count({ startCount: 500 });
   });
 </script>
 </body>
