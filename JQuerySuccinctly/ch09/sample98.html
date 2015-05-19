@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 98</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+  <style type="text/css">
+    .div {
+      height: 100px;
+      width: 200px;
+      background-color: red;
+      position: absolute;
+      left: 20px;
+      border: 1px solid #ff9933;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Sample 98</h2>
+  <div class="div">Animate me!</div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    // Both width and borderLeftWidth properties will animate simultaneously
+    $('.div').animate({ width: '400px', borderLeftWidth: '10px'}, 1000);
+  });
+</script>
+</body>
+</html>
