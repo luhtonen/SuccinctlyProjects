@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 95</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 95</h2>
+  <div id="div" style="height: 100px; width: 100px; background-color: red; color: white;"></div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    function recursiveAnimate() {
+      $('#div').slideToggle('slow', recursiveAnimate);
+    }
+    recursiveAnimate();
+    $('div:animated').text('I am animated');
+  });
+</script>
+</body>
+</html>
