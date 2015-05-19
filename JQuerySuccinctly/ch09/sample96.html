@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 96</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+  <style type="text/css">
+    .div {
+      height: 100px;
+      width: 200px;
+      background-color: red;
+      color: white;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Sample 96</h2>
+  <div class="div">Click Me (hide animation)</div>
+  <div class="div">Click Me (hide no animation)</div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    // Hide with animation
+    $('.div:first').click(function() { $(this).hide(1000) });
+    // Hide no animation
+    $('.div:last').click(function() { $(this).hide() });
+  });
+</script>
+</body>
+</html>
