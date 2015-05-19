@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 90</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 90</h2>
+  <a href="#" title="Hi">dialog, say hi</a>
+  <a href="#" title="Bye">dialog, say bye</a>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    $.fn.dialog = function (options) {
+      var text = this.attr('title') || this.text();
+      alert(text);
+    };
+    $('a').click(function () {
+      $(this).dialog();
+      return false;
+    });
+    $(window).load(function () { // Create DOM element to invoke the plugin
+      $('<a></a>').attr('title', 'I say hi when invoked!').dialog(); // run immediately
+    })
+  });
+</script>
+</body>
+</html>
