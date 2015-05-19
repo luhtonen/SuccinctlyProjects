@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 91</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+  <h2>Sample 91</h2>
+  <div>Out and In Fade</div>
+  <div>Out and In Fade</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    $.fn.outAndInFade = function (customOptions) {
+      var options = $.extend({}, $.fn.outAndInFade.defaultOptions, customOptions || {});
+      return this.each(function () {
+        $(this).fadeOut().fadeIn('normal', function () { // Callback for fadeIn()
+          // Call complete() function, pass it "this"
+          if ($.isFunction(options.complete)) {
+            options.complete.apply(this);
+          }
+        });
+      });
+    };
+    $.fn.defaultOptions = {
+      complete: null // No default function
+    };
+    $('div').outAndInFade({
+      // Change background-color of the element being animated on complete
+      // Note: "this" will refer to the DOM element in the wrapper set
+      complete: function() { $(this).css('background', '#ff9'); }
+    });
+  });
+</script>
+</body>
+</html>
