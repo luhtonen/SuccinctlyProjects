@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sample 100</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Sample 100</h2>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    $.getJSON('http://api.flickr.com/services/feeds/photos_public.gne?tags=resig&tagmode=all&format=json&jsoncallback=?',
+        // Using ? just means call the callback function provided
+        function (data) {
+          console.log('reading data...');
+          $.each(data.items, function (i, item) {
+            console.log('i = ' + i);
+            $('<img/>').attr('src', item.media.m).appendTo('body');
+            if (i === 30) { return false; }
+          });
+        }
+    );
+  });
+</script>
+</body>
+</html>
